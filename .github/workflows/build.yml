@@ -15,11 +15,9 @@ jobs:
         with:
           gradle-version: 4.10.3
       - name: Unzip project
-        run: unzip -o "dawnrex (2).zip"
+        run: unzip -o "dawnrex-v2.zip"
       - name: Add llibrary
         run: cp llibrary-*.jar dawnrex/libs/llibrary-1.7.20.jar
-      - name: Use Forge 2847
-        run: sed -i 's/14.23.5.2860/14.23.5.2847/' dawnrex/build.gradle
       - name: Build
         working-directory: dawnrex
         run: gradle setupCIWorkspace build --no-daemon
