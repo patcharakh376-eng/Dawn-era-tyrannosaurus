@@ -15,7 +15,7 @@ jobs:
         with:
           gradle-version: 4.10.3
       - name: Unzip project
-        run: unzip -o "dawnrex-v2.zip"
+        run: unzip -o "$(ls dawnrex*.zip | sort -V | tail -1)"
       - name: Add llibrary
         run: cp llibrary-*.jar dawnrex/libs/llibrary-1.7.20.jar
       - name: Build
